@@ -1,2 +1,3 @@
 # RageTime-MasterList
-A web application in the form of graphs reflecting the number of online game servers over a different period of time :)
+
+# Веб-приложение в виде графиков, отражающих количество онлайна игровых серверов за разный период времени :)
