@@ -38,3 +38,8 @@
    npm run dev
    cd ../client
    npm run dev
+
+## 📞 Контакты
+   ● **Телеграм** — [@K_a_R_a_T_e_L_L](https://t.me/K_a_R_a_T_e_L_L)
+   
+   ● **Email** — kirillcuhorukov6@gmail.com
