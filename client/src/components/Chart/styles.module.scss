@@ -1,0 +1,201 @@
+.div__zone {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: end;
+    column-gap: 10px;
+    margin-top: 35px;
+
+    .zone__eu {
+        font-size: 25px;
+    }
+    
+    .zone__users {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+}
+
+.container {
+    border-radius: 20px;
+    position: relative;
+    width: 789px;
+    background-color: #1d1d1d;
+
+    &:hover {
+        box-shadow: 0 0 1px 1.5px #ff007f;
+    }
+
+    .chart {
+        border-radius: 0 0 20px 20px;
+        height: 155px;
+        width: 100%;
+        border: 1px dashed rgba(255, 255, 255, 0.145);
+        position: relative;
+
+        .dot_time {
+            position: absolute;
+            bottom: -12px;
+            transform: translateX(-50%);
+            background: white;
+            min-width: 70px;
+            max-height: 25px;
+            white-space: nowrap;
+            color: rgba(0, 0, 0, 0.572);
+            border-radius: 5px;
+            font-size: 12px;
+            padding: 3px;
+            transition: display 1s ease-in-out;
+        }
+    }
+
+    .chart__border {
+        border-radius: 0 0 20px 20px;
+        background-color: #242424;
+    }
+
+    .box {
+        background-color: #242424;
+        width: 100%;
+        height: 95px;
+        padding: 20px 20px;
+        display: grid;
+        grid-template-rows: 50% 50%;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            .box__bottom {
+                .bottom__title span {
+                    margin-left: 10px;
+                    transition: margin-left 0.3s ease-in-out;
+                }
+            }
+        }
+
+        .box__bottom {
+            position: relative;
+            top: 10px;
+            font-size: 14px;
+            opacity: 0.5;
+            display: flex;
+            justify-content: space-between;
+            font-stretch: ultra-condensed;
+
+            div:last-of-type {
+                font-size: 17px;
+                font-weight: 300;
+                font-family: 'Proxima Nova', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+            .bottom__title span {
+                width: 15px;
+                height: 12px;
+                margin-left: 5px;
+                font-size: 20px;
+                position: relative;
+                top: 8px;
+                font-family: 'Proxima Nova', sans-serif;
+                color: white;
+                background-image: url(/svg/arrow.svg);
+            }
+
+            .bottom__title {
+                display: flex;
+                align-items: start;
+                font-weight: 300;
+                font-size: 17px;
+                font-family: 'Proxima Nova', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+        }
+
+        .box__top {
+            display: flex;
+            justify-content: space-between;
+
+            .top__region {
+                font-size: 25px;
+                position: relative;
+                display: flex;
+                align-items: center;
+        text-transform: uppercase;
+
+
+                & div:first-of-type {
+                    width: 15px;
+                    height: 15px;
+                    background-color: yellowgreen;
+                    position: absolute;
+                    left: 0;
+                    border-radius: 100%;
+                    box-shadow: rgba(88, 232, 28, 0.55) 0px 0px 12px;
+                }
+
+                & div:last-of-type {
+                    margin-left: 25px;
+                }
+            }
+
+            .top__count {
+                font-size: 35px;
+                position: relative;
+                top: -10px;
+            }
+        }
+
+        @mixin BoxSvg ($left, $top, $w, $h, $rot) {
+            position: absolute;
+            left: $left;
+            top: $top;
+            width: $w;
+            height: $h;
+            background-size: contain;
+            opacity: 0.1;
+            rotate: $rot;
+            color: none;
+        }
+
+        .box__svg_backg_one {
+            @include BoxSvg(-40px, -15px, 150px, 150px, 0);
+        }
+
+        .box__svg_backg_two {
+            @include BoxSvg(135px, -20px, 70px, 70px, -60deg);
+        }
+
+        .box__svg_backg_three {
+            @include BoxSvg(230px, 45px, 80px, 80px, 32deg);
+        }
+    }
+}
+
+@media (width < 850px) {
+    .container {
+        width: 700px !important;
+    }
+}
+
+@media (width < 750px) {
+    .container {
+        width: 600px !important;
+    }
+}
+
+@media (width < 650px) {
+    .container {
+        width: 500px !important;
+    }
+}
+
+@media (width < 550px) {
+    .container {
+        width: 400px !important;
+    }
+}
+
+@media (width < 450px) {
+    .container {
+        width: 350px !important;
+    }
+}

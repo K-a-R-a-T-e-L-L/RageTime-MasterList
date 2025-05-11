@@ -1,0 +1,95 @@
+@mixin LoaderChild ($w, $h, $left, $top, $right, $bott, $borr) {
+    width: $w;
+    height: $h;
+    background-color: rgb(30, 30, 30, 0.57);
+    border-radius: $borr;
+    position: absolute;
+    left: $left;
+    top: $top;
+    right: $right;
+    bottom: $bott;
+}
+
+.loader {
+    background-color: rgba(35, 35, 35, 0.57);
+    min-height: 100px;
+    border-radius: 20px;
+    position: relative;
+    bottom: 50px;
+    overflow: hidden;
+
+    .loader__one {
+        @include LoaderChild(100px, 40px, 15px, 15px, none, none, 5px)
+    }
+
+    .loader__two {
+        @include LoaderChild(150px, 20px, 15px, none, none, 15px, 5px)
+    }
+
+    .loader__three {
+        @include LoaderChild(150px, 70px, none, 15px, 15px, none, 5px)
+    }
+}
+
+.loader_main {
+    min-height: 250px !important;
+    position: relative;
+    top: 20px;
+
+    .loader_main__one {
+        @include LoaderChild(105px, 35px, 15px, none, none, 15px, 5px)
+    }
+
+    .loader_main__two {
+        @include LoaderChild(105px, 35px, 130px, none, none, 15px, 5px)
+    }
+
+    .loader_main__three {
+        @include LoaderChild(105px, 15px, 250px, none, none, 25px, 5px)
+    }
+
+    .loader_main__four {
+        @include LoaderChild(35px, 35px, none, none, 15px, 15px, 100%)
+    }
+
+    @media (width < 550px) {
+
+        .loader_main__one {
+            @include LoaderChild(70px, 35px, 15px, none, none, 15px, 5px)
+        }
+
+        .loader_main__two {
+            @include LoaderChild(70px, 35px, 95px, none, none, 15px, 5px)
+        }
+
+        .loader_main__three {
+            @include LoaderChild(90px, 15px, 185px, none, none, 25px, 5px)
+        }
+    }
+}
+
+.loader::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 20%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to right, rgb(35 35 35), rgb(37, 37, 37, 0.30), rgb(35 35 35));
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}

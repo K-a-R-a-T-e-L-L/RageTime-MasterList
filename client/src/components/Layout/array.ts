@@ -1,0 +1,18 @@
+export const Settings = [
+    { color: '#ff0048', svg: '0' },
+    { color: 'rgb(69, 205, 91)', svg: '/svg/boston.svg' },
+    { color: 'rgb(239, 60, 60)', svg: '/svg/dellas.svg' },
+    { color: 'rgb(151, 71, 255)', svg: '/svg/washington.svg' },
+    { color: 'rgb(243, 194, 19)', svg: '/svg/las_vegas.svg' },
+    { color: 'rgb(226, 92, 64)', svg: '/svg/detroit.svg' },
+    { color: 'rgb(229, 129, 57)', svg: '/svg/san_francisco.svg' },
+    { color: 'rgb(98, 159, 142)', svg: '/svg/new_york.svg' },
+    { color: 'rgb(255, 7, 126)', svg: '/svg/miami.svg' },
+    { color: 'rgb(119, 189, 233)', svg: '/svg/chicago.svg' },
+    { color: 'rgb(255, 220, 97)', svg: '/svg/atlanta.svg' },
+    { color: 'rgb(98, 183, 84)', svg: '/svg/los_angeles.svg' },
+    { color: 'rgb(64, 152, 255)', svg: '/svg/san_diego.svg' },
+    { color: 'rgb(241, 177, 41)', svg: '/svg/houston.svg' },
+    { color: 'rgb(255, 200, 93)', svg: '/svg/warsaw.svg' },
+    { color: 'rgb(61, 113, 213)', svg: '/svg/berlin.svg' },
+]

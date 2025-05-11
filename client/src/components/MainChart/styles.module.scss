@@ -1,0 +1,176 @@
+.div__zone {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: end;
+    column-gap: 10px;
+    margin-top: 35px;
+
+    .zone__eu {
+        font-size: 25px;
+    }
+
+    .zone__users {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+}
+
+.container {
+    border-radius: 20px;
+    position: relative;
+    max-width: 794px;
+    min-width: 794px;
+    border: 1px dashed rgba(128, 128, 128, 0.694);
+    min-height: 250px;
+    background-color: #1d1d1d;
+
+    &:hover {
+        box-shadow: 0 0 1px 1.5px #ff007f;
+    }
+
+    .dot_time {
+        position: absolute;
+        bottom: -12px;
+        transform: translateX(-50%);
+        background: white;
+        min-width: 70px;
+        max-height: 25px;
+        white-space: nowrap;
+        color: rgba(0, 0, 0, 0.572);
+        border-radius: 5px;
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    .container__box {
+        width: 100.3%;
+        height: 101%;
+        overflow: hidden;
+        transform: translate(-5.3px, -4px);
+        position: relative;
+        border-radius: 20px;
+
+        .loading {
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .container__custom_tooltip {
+            background-color: #ffffff;
+            color: black;
+            padding: 8px;
+            border: 1px solid #ffffff;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+    }
+
+    .container__settings {
+        padding: 0 0 15px 15px;
+        width: 275px;
+        z-index: 1;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        display: flex;
+        column-gap: 5px;
+        align-items: center;
+
+        .settings__meaning {
+            height: 35px;
+            width: 90px;
+            border-radius: 8px;
+            background-color: #1a1a1a;
+            ;
+            display: flex;
+
+            button {
+                height: 100%;
+                width: 45px;
+                font-size: 14px;
+                padding: 0;
+                font-weight: 600;
+            }
+        }
+
+        .settings__time_gap {
+            height: 35px;
+            width: 105px;
+            border-radius: 8px;
+            background-color: #1a1a1a;
+            ;
+            display: flex;
+
+            button {
+                height: 100%;
+                width: 30px;
+                font-size: 14px;
+                padding: 0;
+                font-weight: 600;
+
+                &:last-of-type {
+                    width: 45px;
+                }
+            }
+        }
+
+        .settings__max {
+            font-size: 15px;
+        }
+    }
+
+    .container__upload {
+        height: 25px;
+        width: 25px;
+        z-index: 1;
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        cursor: pointer;
+        background-image: url(/image/upl.png);
+
+        &:hover {
+            background-image: url(/image/uplW.png);
+        }
+    }
+}
+
+@media (width < 850px) {
+    .container {
+        max-width: 700px !important;
+        min-width: 700px !important;
+    }
+}
+
+@media (width < 750px) {
+    .container {
+        max-width: 600px !important;
+        min-width: 600px !important;
+    }
+}
+
+@media (width < 650px) {
+    .container {
+        max-width: 500px !important;
+        min-width: 500px !important;
+    }
+}
+
+@media (width < 550px) {
+    .container {
+        max-width: 400px !important;
+        min-width: 400px !important;
+    }
+}
+
+@media (width < 450px) {
+    .container {
+        max-width: 350px !important;
+        min-width: 350px !important;
+    }
+}
